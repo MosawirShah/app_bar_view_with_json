@@ -7,7 +7,13 @@ void main(){
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+   MyApp({Key? key}) : super(key: key);
+
+  List<Widget> listOfTabs =  const [
+    Tab(text: "User", icon: Icon(Icons.person),),
+    Tab(text: "Books", icon: Icon(Icons.book_online_outlined),),
+    Tab(text: "sections", icon: Icon(Icons.class_outlined),),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -26,11 +32,7 @@ class MyApp extends StatelessWidget {
                 indicatorColor: Colors.black,
                   labelColor: Colors.black,
                   unselectedLabelColor: Colors.white,
-                  tabs: [
-                Tab(text: "User", icon: Icon(Icons.person),),
-                Tab(text: "Books", icon: Icon(Icons.book_online_outlined),),
-                Tab(text: "sections", icon: Icon(Icons.class_outlined),),
-              ]),
+                  tabs: listOfTabs),
             ),
             body: TabBarView(
               children: [
@@ -63,10 +65,10 @@ class MyApp extends StatelessWidget {
                       border: Border.all(
                         width: 4,
                         color: Colors.red,
-                      )
+                      ),
                     ),
                     child: const Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding:  EdgeInsets.all(8.0),
                       child: Text(
                         "MY Book",style: TextStyle(color: Colors.red),
                       ),

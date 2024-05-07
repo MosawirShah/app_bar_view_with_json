@@ -1,7 +1,7 @@
-List userData = [
+List<Map<String, dynamic>> userData = [
   {
     "firstName" : "Adil",
-    "lastName" : "Afridi",
+    "lastName" : "Afraid",
     "Roll No " : 306,
     "sections" : ["A", "B" , "C"],
     "role" : "Student",
